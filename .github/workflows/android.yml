@@ -24,6 +24,11 @@ jobs:
       - run: chmod +x gradlew
 
       - run: ./gradlew assembleDebug
+      
+      # 👇 ADICIONE AQUI
+      - name: List APK outputs
+        run: ls -R app/build/outputs
+
 
       - uses: actions/upload-artifact@v4
         with:
